@@ -28,6 +28,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/normalize.css/normalize.css",
+              "src/assets/fonts/helvetica-2-cufonfonts-webfont/style.css",
               "src/styles.sass"
             ],
             "scripts": []

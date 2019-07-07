@@ -1,0 +1,12 @@
+ul.list(*ngIf="!selectedItem")
+  li(
+    *ngFor="let item of list",
+    (click)="onCheck(item.id)"
+  )
+    list-item([item]="item")
+
+ul.list(*ngIf="selectedItem")
+  li((click)="onCheck(selectedItem.id)")
+    list-item([item]="selectedItem")
+
+h2.no-found(*ngIf="!list.length") No results found

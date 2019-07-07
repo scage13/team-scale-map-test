@@ -1,0 +1,13 @@
+agm-map.map(
+  [fitBounds]="true",
+  [disableDefaultUI]="true",
+)
+  agm-marker(
+    *ngFor="let pin of list",
+    [latitude]="pin.lat",
+    [longitude]="pin.lon",
+    [agmFitBounds]="true",
+    [iconUrl]="pin.selected ? mapIcons.active : mapIcons.default",
+    [zIndex]="pin.selected ? 2 : 1",
+    (markerClick)="onClick(pin.id, pin)",
+  )

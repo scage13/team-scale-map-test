@@ -1,0 +1,17 @@
+figure.item
+  .item-preview
+    img.item-preview__icon(
+      [src]="item.mainPhotoUrl",
+      [alt]="item.name",
+    )
+  figcaption.item-info
+    h2.item-info__title {{ item.name }}
+    p.item-info__address
+      span.item-info__city {{ item.city }}
+      span.item-info__country {{ item.countryFullName }}
+    .item-info__from
+      | From:
+      span ${{ item.ratePerHour | number }}
+    .item-info__participants
+      | Participants:
+      span {{ item.maxParticipants }}

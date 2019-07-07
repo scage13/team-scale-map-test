@@ -1,0 +1,67 @@
+\:host
+  display: block
+
+.item
+  position: relative
+  display: block
+  cursor: pointer
+  &:hover
+    .item-preview
+      &:after
+        opacity: 1
+
+  &-preview
+    position: relative
+    height: 220px
+    overflow: hidden
+
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      display: block
+      width: 100%
+      height: 100%
+      background-color: rgba(0,0,0,0.2)
+      opacity: 0
+      transition: opacity 0.2s ease
+
+    &__icon
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  &-info
+    padding: 15px 0
+
+    &__title
+      min-height: 42px
+      font-size: 18px
+
+    &__address
+      padding-top: 5px
+
+    &__from
+      position: absolute
+      top: 185px
+      right: 15px
+      font-size: 16px
+      font-weight: bold
+      color: #fff
+
+      span
+        margin-left: 5px
+
+    &__participants
+      position: absolute
+      top: 20px
+      left: 0
+      display: block
+      padding: 5px 10px
+      background-color: rgba(0,0,0,0.7)
+      font-size: 14px
+      color: #fff
+
+      span
+        margin-left: 5px
